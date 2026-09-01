@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fodinha - Calculadora de Probabilidade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>🃏 Fodinha</h1>
+            <p>Calculadora de probabilidade</p>
+        </header>
+
+
+        <!-- ======================================
+             CONFIGURAÇÃO DA PARTIDA
+        ======================================= -->
+
+        <section class="card">
+
+            <h2>Configuração da partida</h2>
+
+
+            <label for="players">
+                Quantidade de jogadores
+            </label>
+
+            <input
+                type="number"
+                id="players"
+                min="2"
+                max="9"
+                value="4"
+            >
+
+
+            <label for="position">
+                Sua posição na declaração
+            </label>
+
+            <select id="position">
+            </select>
+
+
+            <label for="lives">
+                Suas vidas
+            </label>
+
+            <select id="lives">
+
+                <option value="3">
+                    ❤️❤️❤️ 3 vidas
+                </option>
+
+                <option value="2">
+                    ❤️❤️ 2 vidas
+                </option>
+
+                <option value="1">
+                    ❤️ 1 vida
+                </option>
+
+            </select>
+
+
+            <label for="turnedCard">
+                Carta virada
+            </label>
+
+            <select id="turnedCard">
+
+                <option value="">
+                    Selecione a carta
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- ======================================
+             DECLARAÇÕES DA MESA
+        ======================================= -->
+
+        <section class="card">
+
+            <h2>Declarações da mesa</h2>
+
+            <p>
+                Informe os jogadores que já fizeram
+                suas declarações.
+            </p>
+
+            <div id="playersDeclarations">
+            </div>
+
+            <div class="table-total">
+
+                Total declarado na mesa:
+
+                <strong id="tableTotal">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             SUAS CARTAS
+        ======================================= -->
+
+        <section class="card">
+
+            <h2>Suas cartas</h2>
+
+            <div id="hand" class="cards">
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             RESULTADO
+        ======================================= -->
+
+        <button id="calculate">
+            CALCULAR PROBABILIDADE
+        </button>
+
+
+        <section id="result" class="card result">
+
+            <h2>Análise</h2>
+
+            <p id="resultText">
+
+                Informe as cartas e as declarações
+                para começar.
+
+            </p>
+
+        </section>
+
+
+        <!-- ======================================
+             RESULTADO REAL
+        ======================================= -->
+
+        <section class="card">
+
+            <h2>Depois da partida</h2>
+
+            <p>
+                Quando as 4 rodadas terminarem,
+                informe quantas você realmente ganhou.
+            </p>
+
+            <label for="actualWins">
+                Rodadas vencidas
+            </label>
+
+            <select id="actualWins">
+
+                <option value="">
+                    Ainda não informado
+                </option>
+
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+
+            </select>
+
+            <button id="finishRound">
+                CALCULAR VIDAS PERDIDAS
+            </button>
+
+            <p id="lifeResult"></p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
